@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<title>HAPPY FATHERS' DAY</title>
+		<style>
+			body {
+				background: #303030;
+			}
+			h1 {
+				color: #aaaaaa;
+				text-align: center;
+				font-family: "Courier New";
+				margin-bottom:0em;
+			}
+
+			p {
+				font-family: Impact, Charcoal, sans-serif;
+				font-size: 80px;
+				text-align: center;
+				color: #dddddd;
+				margin-top:0em;
+				margin-bottom:0em;
+			}
+			img.centerRat{
+				/*text-align: center;*/
+				display: block;
+				margin-left: auto;
+				margin-right: auto
+				/*width: 100%;*/
+			}
+		</style>
+		<script type="text/javascript">
+		function switchRat()
+		{
+			if(rat==1)
+			{
+				document.getElementById("rat").src="http://yuelinnchong.comuf.com/rat1.png";
+				rat = 2;
+			}
+			else
+			{
+				document.getElementById("rat").src="http://yuelinnchong.comuf.com/rat2.png";
+				rat = 1;
+			}
+		}
+		function startSwitch()
+		{
+			setInterval(switchRat, 250);
+		}
+		var rat = 1;
+		</script>
+		
+
+
+	</head>
+	
+	<body onload = "startSwitch()">
+		<h1>Dear Dad,</h1>
+		<p>Happy Fathers' Day</p>
+		<div class="centerRat">
+			<img id="rat" src="rat1.PNG" alt="rat" onclick = "myFunction()" style="display:block; border:10px solid #00008B;">
+			<img id="wage" onclick="pauseAudio()"> </img>
+		</div>
+
+
+		<script>
+		function myFunction() {
+		    // document.getElementById("demo").innerHTML = "Hello World";
+			audio.play();
+			setInterval(changeBg, 200);
+			document.getElementById("rat").style.display='none';
+			document.getElementById("wage").src="http://yuelinnchong.comuf.com/wage.PNG";
+		}
+
+		function changeBg()
+		{
+			i = (i+1) % bgColors.length;
+			document.body.style.backgroundColor = bgColors[i];
+		}
+		var audio = new Audio('bensound-dubstep.mp3');
+		var bgColors=[];
+		bgColors[0]="red";
+		bgColors[1]="orange";
+		bgColors[2]="yellow";
+		bgColors[3]="green";
+		bgColors[4]="blue";
+		bgColors[5]="purple";
+		bgColors[6]="pink";
+		var i = -1;
+
+		function pauseAudio()
+		{
+			audio.pause();
+		}
+
+		// var wage=[]; j = -1;
+		// wage[0]="wage.png";
+		// wage[1]=
+		// wage[2]=
+		// wage[3]=
+		// wage[4]=
+		// wage[5]=
+		// wage[6]=
+		// wage[7]=
+		// wage[8]=
+		// wage[9]=
+		// wage[10]=
+		// wage[11]=
+
+		</script>
+
+	</body>
+</html>
