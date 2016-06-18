@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>HAPPY FATHERS' DAY</title>
+		<style>
+			body {
+				background: #434343;
+			}
+			h1 {
+				color: #aaaaaa;
+				text-align: center;
+				font-family: "Courier New";
+				margin-bottom:0em;
+			}
+
+			p {
+				font-family: Impact, Charcoal, sans-serif;
+				font-size: 80px;
+				text-align: center;
+				color: #dddddd;
+				margin-top:0em;
+				margin-bottom:0em;
+			}
+			.centerRat{
+				text-align: center;
+				margin: auto;
+				width: 61.25%;
+				border: 10px solid #00008B;
+			}
+		</style>
+		<script type="text/javascript">
+		function switchRat()
+		{
+			if(rat==1)
+			{
+				document.getElementById("rat").src="rat2.png";
+				rat = 2;
+			}
+			else
+			{
+				document.getElementById("rat").src="rat1.png";
+				rat = 1;
+			}
+		}
+		function startSwitch()
+		{
+			setInterval(switchRat, 300);
+		}
+		var rat = 1;
+		function playMe(soundFile)
+		{
+			document.getElementById("dummy").innerHTML= "<embed src=\""bensound-dubstep.mp3"\" hidden=\"true\" autostart=\"true\" loop=\"true\" />";
+		}
+		</script>
+	</head>
+	
+	<body onload = "startSwitch()">
+		<h1>Dear Dad,</h1>
+		<p>Happy Fathers' Day</p>
+		<div class="centerRat">
+			<img id="rat" src="rat1.PNG" alt="rat">
+		</div>
+		<span id="dummy"></span>
+	<br>
+	<br>
+	<br>
+	<br>
+		<bgsound src="yourmusicfile.mid" loop="infinite"> 
+		<audio id= "music" controls>
+		  <source src="bensound-dubstep.mp3" type="audio/mpeg">
+		  Your browser does not support the audio tag.
+		</audio> 
+	</body>
+</html>
