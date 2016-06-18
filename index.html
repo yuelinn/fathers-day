@@ -65,13 +65,18 @@
 		function myFunction() {
 		    // document.getElementById("demo").innerHTML = "Hello World";
 			audio.play();
-			setTimeout(drop,5000);
-			
+			setTimeout(buildUp,4000);
+		}
+
+		function buildUp(){
+			intervId=setInterval(changeBg, 100);
+			setTimeout(drop, 1000);
 		}
 
 		function drop()
 		{
-			setInterval(changeBg, 200);
+			clearInterval(intervId);
+			intervId=setInterval(changeBg, 300);
 			document.getElementById("rat").style.display='none';
 			document.getElementById("wage").src="http://yuelinnchong.comuf.com/wage.PNG";
 		}
