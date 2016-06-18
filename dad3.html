@@ -43,9 +43,16 @@
 		}
 		function startSwitch()
 		{
-			setInterval(switchRat, 300);
+			setInterval(switchRat, 250);
 		}
 		var rat = 1;
+		</script>
+		<script type="text/javascript">
+			function playMe(soundfile)
+			{
+				document.getElementById("span").innerHTML=
+    "<embed src=\""+soundfile+"\" hidden=\"true\" autostart=\"true\" loop=\"false\" />";
+			}
 		</script>
 	</head>
 	
@@ -53,14 +60,15 @@
 		<h1>Dear Dad,</h1>
 		<p>Happy Fathers' Day</p>
 		<div class="centerRat">
-			<img id="rat" src="rat1.PNG" alt="rat">
+			<img id="rat" src="rat1.PNG" alt="rat" onclick = "playME('bensound-dubstep.mp3');">
 		</div>
 		<span id="dummy"></span>
+		<a href="#" onclick="playSound('bensound-dubstep.mp3');">Click here to hear a sound</a>
 	<br>
 	<br>
 	<br>
 	<br>
-		<bgsound src="yourmusicfile.mid" loop="infinite"> 
+		<bgsound src="bensound-dubstep.mp3" loop="infinite"> 
 		<audio id= "music" controls>
 		  <source src="bensound-dubstep.mp3" type="audio/mpeg">
 		  Your browser does not support the audio tag.
