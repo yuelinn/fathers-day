@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>HAPPY FATHERS' DAY</title>
@@ -26,6 +27,16 @@
 				margin-left: auto;
 				margin-right: auto;
 			}
+			.centerImg
+			{
+				/*display: block;
+				margin-left: auto;
+				margin-right: auto;
+				position:relative;*/
+				text-align: center;
+				/*width:513px;
+				height:599px;*/
+			}
 		</style>
 		<script type="text/javascript">
 		function switchRat()
@@ -47,19 +58,16 @@
 		}
 		var rat = 1;
 		</script>
-		
-
 
 	</head>
 	
 	<body onload = "startSwitch()">
 		<h1>Dear Dad,</h1>
 		<p>Happy Fathers' Day</p>
-		<div>
-			<IMG class="centerRat" id="rat" src="rat1.PNG" alt="rat" onclick = "myFunction()" style="display:block; border:10px solid #00008B; width: 60.5%;">
-			<IMG class="centerRat" id="wage" onclick="pauseAudio()"> </img>
+		<IMG class="centerRat" id="rat" src="rat1.PNG" alt="rat" onclick = "myFunction()" style="display:block; border:10px solid #00008B; width: 60.5%;">
+		<div class="centerImg" id=main>
+			<img id="wage" onclick="pauseAudio()"> </img>
 		</div>
-
 
 		<script>
 		function myFunction() {
@@ -76,9 +84,17 @@
 		function drop()
 		{
 			clearInterval(intervId);
-			intervId=setInterval(changeBg, 300);
+			setInterval(changeBg, 400);
 			document.getElementById("rat").style.display='none';
-			document.getElementById("wage").src="http://yuelinnchong.comuf.com/wage.PNG";
+			document.getElementById("wage").src="http://yuelinnchong.comuf.com/wagewhite.png";
+			document.getElementById("wage").style="width:513px;height:599px;display:'none'";
+			setInterval(changeMain, 3000);
+		}
+
+		function changeMain()
+		{
+			j=(j+1)%wage.length;
+			document.getElementById("wage").src=wage[j];
 		}
 
 		function changeBg()
@@ -102,16 +118,16 @@
 			audio.pause();
 		}
 
-		// var wage=[]; j = -1;
-		// wage[0]="http://yuelinnchong.comuf.com/wage.PNG";
-		// wage[1]=
-		// wage[2]=
-		// wage[3]=
-		// wage[4]=
-		// wage[5]=
-		// wage[6]=
-		// wage[7]=
-		// wage[8]=
+		var wage=[]; j = -1;
+		wage[0]="http://yuelinnchong.comuf.com/1.JPG";
+		wage[1]="http://yuelinnchong.comuf.com/2.JPG";
+		wage[2]= "http://yuelinnchong.comuf.com/3.JPG";
+		wage[3]="http://yuelinnchong.comuf.com/4.JPG";
+		wage[4]="http://yuelinnchong.comuf.com/5.JPG";
+		wage[5]="http://yuelinnchong.comuf.com/6.JPG";
+		wage[6]="http://yuelinnchong.comuf.com/7.JPG";
+		wage[7]="http://yuelinnchong.comuf.com/8.JPG";
+		wage[8]="http://yuelinnchong.comuf.com/8.JPG";
 		// wage[9]
 		// wage[10]=
 		// wage[11]=
